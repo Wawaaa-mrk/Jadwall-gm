@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENDA GENERAL MANAGER BANDARA SULTAN SYARIF KASIM 2 PEKANBARU</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container output-container">
+        <header>
+            <img src="pic/Logo bandara.png" alt="InJourney Airport Logo" class="logo-output">
+            <h1 class="bold-title">REKAP AGENDA</h1>
+            <div class="filter-container">
+                <div class="filter">
+                    <label for="completed-filter-date">Filter by Date: </label>
+                    <input type="date" id="completed-filter-date">
+                </div>
+                <div class="filter">
+                    <label for="search-input">Search: </label>
+                    <input type="text" id="search-input" placeholder="Search by agenda">
+                </div>
+            </div>
+        </header>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Hari dan Tanggal</th>
+                        <th>Waktu</th>
+                        <th>Agenda</th>
+                        <th>Tempat</th>
+                        <th>Peserta</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="completed-schedule-table">
+                </tbody>
+            </table>
+        </div>
+        <button id="export-button" class="add-schedule-button">Export to Excel</button>
+        <a href="hasil-jadwal.html" class="add-schedule-button">Kembali ke Jadwal Aktif</a>
+    </div>
+    <script src="script-selesai.js"></script>
+</body>
+</html>
