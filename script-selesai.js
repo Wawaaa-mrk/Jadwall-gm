@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const exportButton = document.getElementById('export-button');
     const completedSchedules = JSON.parse(localStorage.getItem('completedSchedules')) || [];
 
-    // Fungsi untuk render jadwal selesai
     function renderCompletedSchedules(filteredSchedules) {
         completedScheduleTable.innerHTML = '';
         filteredSchedules.forEach((schedule, index) => {
@@ -26,16 +25,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Render jadwal selesai saat halaman dimuat
     renderCompletedSchedules(completedSchedules);
 
-    // Fungsi untuk filter berdasarkan tanggal
     filterDate.addEventListener('input', function () {
         const filteredSchedules = completedSchedules.filter(schedule => schedule.tanggal === filterDate.value);
         renderCompletedSchedules(filteredSchedules);
     });
 
-    // Fungsi untuk pencarian berdasarkan agenda
     searchInput.addEventListener('input', function () {
         const searchTerm = searchInput.value.toLowerCase();
         const filteredSchedules = completedSchedules.filter(schedule => 
@@ -44,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
         renderCompletedSchedules(filteredSchedules);
     });
 
-    // Fungsi untuk ekspor ke Excel
     exportButton.addEventListener('click', function () {
         const table = completedScheduleTable;
         const wb = XLSX.utils.table_to_book(table, { sheet: "Rekap Agenda" });
