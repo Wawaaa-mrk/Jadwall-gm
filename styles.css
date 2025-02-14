@@ -154,14 +154,12 @@ td ul {
   margin: 10px 0;
 }
 
-/* Pengaturan label dan input di dalam filter */
 .filter {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* Desain input untuk filter dan pencarian */
 .filter input {
   padding: 8px;
   font-size: 14px;
@@ -170,7 +168,6 @@ td ul {
   width: 200px;
 }
 
-/* Tombol Export */
 #export-button {
   background-color: #2ecc71;
   color: white;
